@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     const fetchExhibitionData = async () => {
       const data = await fetch(
-        "https://skylarkdev.digital/eventapi/api/exhibition/0"
+       process.env.API_URL
       );
       if (data.ok) {
         const json = await data.json();
